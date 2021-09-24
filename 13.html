@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		function f1(button){
+			alert(button.name+" "+name);
+		}
+		var count = 0;
+		function counter(text)
+		{	
+			count++;
+			text.innerHTML = "мышь-мышь "+count+" пыш-пыш";
+		}
+	</script>
+</head>
+<body>
+<input type="button" name="b1" onclick="f1(this) " value="click me">
+<span onmouseover="counter(this)">мышь-мышь 0 пыш-пыш</span>
+</body>
+</html>

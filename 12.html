@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var global = 12;
+	var i = 10;
+	function test()
+	{
+		global ++;
+		var i = 5;
+		i++;
+		document.write('i = ' + i + ' global - ' + global + "<br />");
+	}
+	test();
+	document.write('i = ' + i + ' global - ' + global);
+</script>
+</body>
+</html>

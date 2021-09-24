@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	for (var i = 1; i <= 10; i++) {
+		if (i % 3 == 0) continue;
+		if (i == 1 )
+			document.write('Начало цикла:');
+		document.write(i);
+		if (i == 10)
+			document.write('Конец цикла!');
+	}
+	
+	var b = 10;	
+	while (b !=0 ) {
+		if(b < 5) break;
+		b--;
+		b--;
+		document.write(b);
+	}
+
+	var y = 1000;
+	do {
+		y-=100;
+		document.write(y);
+	} while (y>100);
+</script>
+</body>
+</html>

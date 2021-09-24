@@ -1,0 +1,60 @@
+ <html>
+<head>
+	<meta charset="utf-8">
+	<title>Test</title>
+	<script type="text/javascript">
+		function valid(form) {
+			var fail = false;
+			var name = form.inp.value;
+			var Pass = form.Pass.value;
+			var RePass = form.RePass.value;
+			var Pol = form.Pol.value;
+			var Email = form.Email.value;
+
+			var reg = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
+
+
+
+			if (name == '' || name == ' ')
+				fail = "Name!";
+			else if (Pass == '')
+				fail = "Pass!";
+			else if (RePass != Pass)
+				fail = "RePass!";
+			else if (Pol == '')
+				fail = "Pol!";
+			else if (reg.test(Email) == false) 
+				fail = "Email!";
+			else if (Email.split("@").lenght - 1 == 0)
+				fail = "Email!";
+			if (fail) 
+				alert(fail);
+			else
+				window.location = "http:/google.com";
+		}
+	</script> 
+</head>
+<body>
+	<form action="" method="post" name="test" id="form">
+		<label for="Name">Name:</label>
+		<input type="text" name="inp" placeholder="Name"><br />
+
+		<label for="Pass">Pass:</label>
+		<input type="Pass" name="Pass" placeholder="Password"><br />
+
+		<label for="RePass">Prov:</label>
+		<input type="Pass" name="RePass" placeholder="RePassword"><br />
+
+		<span>Pol:</span>
+		
+		<input type="radio" name="Pol" id="male" placeholder="Pol"><label for="male"> Male </label>
+		<input type="radio" name="Pol" id="female" placeholder="Pol"><label for="female"> Female </label>
+		<br /><label for="Email">Email:</label><br />
+		<input type="text" name="Email" placeholder="Email">
+		<br /><input type="button" onclick="valid(document.getElementById('form'))" name="sub" 
+		value="Ok">
+
+		
+	</form>
+</body>
+</html>
